@@ -83,16 +83,11 @@ cd contacts-telephonique-project
 ## 📷 Screenshots 
 
 Home Screen
-![Home Screen](images/home.png)
+![Home Screen](images/homa.png)
 
 Dashboard Screen
 ![Dashboard Screen](images/dashboard.png)
 
-Add Contact
-![Add Contact](images/add_contact.png)
-
-Edit Contact
-![Edit Contact](images/edit_contact.png)
 
 
 
