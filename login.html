@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - ContactEAS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png"  href="images/logoweb.png">
+     
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0f2d, #1a1a40);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+
+    }
+    .login-containercomplet{
+      margin: 60px;
+
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(20px);
+      color: white;
+      width: 100%;
+      max-width: 400px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s ease-out forwards;
+      margin: auto;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #ccc;
+    }
+
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .remember-me input {
+      accent-color: #8a2be2;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      background-color: #8a2be2;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-btn:hover {
+      background-color: #a55ff4;
+    }
+
+    .login-footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    .login-footer a {
+      color: #8a2be2;
+      text-decoration: none;
+    }
+
+    .login-footer a:hover {
+      text-decoration: underline;
+    }
+    .logo {
+      width: 180px;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-out forwards;
+    }
+
+    .tagline {
+      font-size: 19px;
+      color: #ccc;
+      display: flex;
+      flex-direction: row;
+      animation: fadeInDown 1.2s ease-out forwards;
+      font-weight: bold;
+      margin-left:19px;
+    }
+        @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .login-containercomplet{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-self: center;
+        margin: auto !important;
+      }
+    }
+  .btn-back {
+    display: inline-block;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #8a2be2, #3222ae);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 16px;
+  }
+
+  .btn-back:hover {
+    background: linear-gradient(135deg, #a559f3, #4a36d6);
+    transform: translateY(-3px);
+  }
+
+  </style>
+</head>
+<body>
+<div class="login-containercomplet">
+  <div class="tagline">
+    <img src="images/logo.png" alt="ContactEAS Logo" class="logo">
+    <p>Welcome back to ContactEAS</p>
+  </div>
+
+  <div class="login-container">
+    <h2>Login to ContactEAS</h2>
+    <form action="checklogin.php" method="post">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="remember-me">
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember Me</label>
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+    <div class="login-footer">
+      <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+    <!-- Back Link -->
+    <a href="index.html" class="btn-back">
+    &#8592; Back
+  </a>
+  </div>
+</div>
+</body>
+</html>
