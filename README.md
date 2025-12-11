@@ -142,7 +142,7 @@ If you like this project, don’t forget to leave a ⭐ on GitHub!
 👩‍💻 **Noura ELH - Project Creator**
 Email: [elhassanynora@gmail.com](mailto:elhassanynora@gmail.com)
 GitHub: [Noura-ELH](https://github.com/Noura-ELH)
-LinkedIn: [Noura El-hassany](www.linkedin.com/in/noura-el-hassany-9210363a0)
+LinkedIn: [Noura El-hassany](https://www.linkedin.com/in/noura-el-hassany-9210363a0)
 
 Thank you for visiting **Contacteas**! 💼✨
 
